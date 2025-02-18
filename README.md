@@ -1,19 +1,14 @@
-Here's the markdown code for your README file:
-
-```markdown
 # Full Stack Development Task at Ninja Code
 
 ## Introduction
 
-The Enatega multi-vendor food delivery solution is designed to provide a user-friendly platform for the food delivery and logistics business. It allows multiple restaurants to list their services and deliver to different locations, similar to popular platforms like Foodpanda and Uber Eats.
+The **Enatega** multi-vendor food delivery solution is designed to provide a user-friendly platform for the food delivery and logistics business. It allows multiple restaurants to list their services and deliver to different locations, similar to popular platforms like Foodpanda and Uber Eats.
 
-## Date and Time of Submission
-- **Date**: [Insert Date Here]
 - **Name**: Muhammad Momin Rauf
 
 ## Project Details
 
-The Enatega platform allows users to search for nearby restaurants, select their delivery location, and view restaurant details dynamically. The platform is built using modern technologies and follows a modular component structure for better scalability.
+The **Enatega** platform allows users to search for nearby restaurants, select their delivery location, and view restaurant details dynamically. The platform is built using modern technologies and follows a modular component structure for better scalability.
 
 ## Tools and Technologies
 - **Next.js 14**
@@ -25,12 +20,17 @@ The Enatega platform allows users to search for nearby restaurants, select their
 ## Components Overview
 
 ### 1. Header Component
-| **Feature** | **Details** |
-|-------------|-------------|
-| **Hooks** | `useState` |
-| **Logic** | - Manages selected location using `useState`.<br>- Renders navigation elements like Logo, Login button, and Cart icon. |
+
+| **Feature**        | **Details**                                                                                              |
+|--------------------|----------------------------------------------------------------------------------------------------------|
+| **Hooks**          | `useState`                                                                                               |
+| **Logic**          | - Manages the selected location using `useState`.<br>- Renders navigation elements like Logo, Login button, and Cart icon. |
 
 ```javascript
+// Example of header component logic
+const [location, setLocation] = useState('');
+const handleLogin = () => { /* Login logic */ };
+
 'use client';
 
 import Image from 'next/image';
