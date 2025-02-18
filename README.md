@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Full Stack Development Task at Ninja Code
 
-## Getting Started
+## Introduction
 
-First, run the development server:
+The Enatega multi-vendor food delivery solution is designed to provide a user-friendly platform for the food delivery and logistics business. It allows multiple restaurants to list their services and deliver to different locations, similar to popular platforms like Foodpanda and Uber Eats.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Date and Time of Submission
+- **Date**: 18/2/25 
+- **Name**: Muhammad Momin Rauf
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Project Details
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The Enatega platform allows users to search for nearby restaurants, select their delivery location, and view restaurant details dynamically. The platform is built using modern technologies and follows a modular component structure for better scalability.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Tools and Technologies
+- **Next.js 14**
+- **PrimeReact**
+- **Apollo Client**
+- **GraphQL** (for querying restaurant data)
+- **OpenCage API** (for location services)
 
-## Learn More
+## Components Overview
 
-To learn more about Next.js, take a look at the following resources:
+### 1. Header Component
+| **Feature** | **Details** |
+|-------------|-------------|
+| **Hooks** | `useState` |
+| **Logic** | - Manages selected location using `useState`.<br>- Renders navigation elements like Logo, Login button, and Cart icon. |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```javascript
+'use client';
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+import Image from 'next/image';
+import { Button } from 'primereact/button';
+import { Dropdown } from 'primereact/dropdown';
+import { useState } from 'react';
+import { BsBag } from 'react-icons/bs';
+import { FaUser } from 'react-icons/fa';
 
-## Deploy on Vercel
+const locations = [
+  { label: 'Berlin, Germany', value: 'berlin' },
+  { label: 'Paris, France', value: 'paris' },
+  { label: 'New York, USA', value: 'newyork' },
+];
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+export default function Header() {
+  const [selectedLocation, setSelectedLocation] = useState(locations[0]);
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+  return (
+    <header className="flex items-center justify-between px-6 py-4 border-b border-gray-300 bg-white shadow-md">
+      {/* Logo */}
+      <div className="flex items-center">
+        <Image src="/logo.svg" alt="Logo" width={120} height={40} />
+      </div>
+
+      {/* Actions */}
+      <div className="flex items-center gap-6 border-l border-gray-300 pl-6">
+        <button className="flex items-center gap-2 text-black font-semibold hover:text-gray-600">
+          <FaUser size={18} />
+          <span className="uppercase">Login</span>
+        </button>
+        <BsBag size={24} className="cursor-pointer text-black hover:text-gray-600" />
+      </div>
+    </header>
+  );
+}
