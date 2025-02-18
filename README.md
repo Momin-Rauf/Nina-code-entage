@@ -21,9 +21,9 @@ The **Enatega** platform allows users to search for nearby restaurants, select t
 
 ## UI
 
-![Image 1](/image1.png)
+![Image 1](public/image1.png)
 
-![Image 2](/image.png)
+![Image 2](public/image.png)
 
 ## Components Overview
 
