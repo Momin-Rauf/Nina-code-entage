@@ -4,6 +4,8 @@
 
 The **Enatega** multi-vendor food delivery solution is designed to provide a user-friendly platform for the food delivery and logistics business. It allows multiple restaurants to list their services and deliver to different locations, similar to popular platforms like Foodpanda and Uber Eats.
 
+## Date and Time of Submission
+- **Date**: [Insert Date Here]
 - **Name**: Muhammad Momin Rauf
 
 ## Project Details
@@ -16,6 +18,12 @@ The **Enatega** platform allows users to search for nearby restaurants, select t
 - **Apollo Client**
 - **GraphQL** (for querying restaurant data)
 - **OpenCage API** (for location services)
+
+## UI
+
+![Image 1](/image1.png)
+
+![Image 2](/image.png)
 
 ## Components Overview
 
@@ -30,6 +38,7 @@ The **Enatega** platform allows users to search for nearby restaurants, select t
 // Example of header component logic
 const [location, setLocation] = useState('');
 const handleLogin = () => { /* Login logic */ };
+
 
 'use client';
 
