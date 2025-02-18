@@ -5,7 +5,7 @@
 The **Enatega** multi-vendor food delivery solution is designed to provide a user-friendly platform for the food delivery and logistics business. It allows multiple restaurants to list their services and deliver to different locations, similar to popular platforms like Foodpanda and Uber Eats.
 
 ## Date and Time of Submission
-- **Date**: [Insert Date Here]
+- **Date**: 18 / 2 / 25
 - **Name**: Muhammad Momin Rauf
 
 ## Project Details
